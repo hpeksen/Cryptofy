@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cryptofy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIS-Tw-XT0">
+                                <rect key="frame" x="8" y="822" width="398" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3bu-3X-gdi"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="filled" title="UPDATE DATA" cornerStyle="large" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnUpdateData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A1Y-BS-Nug"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t6i-97-lx3">
+                                <rect key="frame" x="0.0" y="124" width="414" height="690"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZPF-zH-fUN">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="Bko-A7-I8M" customClass="CollectionViewCell" customModule="Cryptofy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cg0-xV-w6r" customClass="CollectionViewCell" customModule="Cryptofy" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QuN-ti-xDi">
+                                <rect key="frame" x="0.0" y="52" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rZ2-EW-gK1"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZIS-Tw-XT0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0tf-hF-Izs"/>
+                            <constraint firstItem="t6i-97-lx3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6ss-jT-79M"/>
+                            <constraint firstItem="t6i-97-lx3" firstAttribute="top" secondItem="QuN-ti-xDi" secondAttribute="bottom" constant="21" id="Jzf-Aw-JmK"/>
+                            <constraint firstItem="ZIS-Tw-XT0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="aiD-SU-2f8"/>
+                            <constraint firstItem="QuN-ti-xDi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bfx-ih-Ci4"/>
+                            <constraint firstItem="ZIS-Tw-XT0" firstAttribute="top" secondItem="t6i-97-lx3" secondAttribute="bottom" constant="8" symbolic="YES" id="d7a-WG-srL"/>
+                            <constraint firstItem="QuN-ti-xDi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hVM-oo-w9C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZIS-Tw-XT0" secondAttribute="trailing" constant="8" id="ljE-iH-Zp6"/>
+                            <constraint firstItem="QuN-ti-xDi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="mvD-6W-2TY"/>
+                            <constraint firstItem="t6i-97-lx3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zl0-Qn-d1B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="t6i-97-lx3" id="Cn2-1g-scp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
